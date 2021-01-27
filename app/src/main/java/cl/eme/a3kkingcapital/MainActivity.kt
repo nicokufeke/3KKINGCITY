@@ -7,7 +7,7 @@ import cl.eme.a3kkingcapital.view.TrekkingSantiagoListingFragment
 import timber.log.Timber
 
 /*
- 1. [ ] Fun Update
+ 1. [X] Fun Update
  2. [ ] Detail Fragment
  3. [ ] Layouts
  */
@@ -22,8 +22,7 @@ class MainActivity : AppCompatActivity() {
         initLog()
     }
     private fun initLog(){
-        if(BuildConfig.DEBUG){
             Timber.plant(Timber.DebugTree())
-        }
+        Timber.d("On Create")
     }
 }

@@ -13,8 +13,12 @@ class TrekkingSantiagoAdapter : RecyclerView.Adapter<TrekkingSantiagoAdapter.Tre
 
     private var trekkingList = listOf<TrekkingSantiago>()
     private val selectedItem = MutableLiveData<TrekkingSantiago>()
-    fun selectedItem() : LiveData<TrekkingSantiago> = selectedItem
 
+    fun selectedItem() : LiveData<TrekkingSantiago> = selectedItem
+    fun update (getTrekking: List<TrekkingSantiago>) {
+        trekkingList =getTrekking
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrekkingSantiagoVH {
         val binding = ItemListTrekkingBinding.inflate(LayoutInflater.from(parent.context))
@@ -24,6 +28,9 @@ class TrekkingSantiagoAdapter : RecyclerView.Adapter<TrekkingSantiagoAdapter.Tre
     override fun onBindViewHolder(holder: TrekkingSantiagoVH, position: Int) {
         val trekking = trekkingList[position]
         holder.bind(trekking)
+        holder.itemView.setOnClickListener{
+            selectedItem.value = trekking
+        }
     }
 
     override fun getItemCount(): Int {

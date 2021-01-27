@@ -11,16 +11,18 @@ import kotlinx.coroutines.launch
 class TrekkingSantiagoViewModel: ViewModel() {
 
     private val repository = Repository()
-    private val selected = MutableLiveData<List<TrekkingSantiago>>()
-    fun selected(): MutableLiveData<List<TrekkingSantiago>> = selected
+    private val selected = repository.trekkings
+    fun selected(): LiveData<List<TrekkingSantiago>> = selected
 
+    private val mutableLiveData = MutableLiveData<TrekkingSantiago>()
+    fun selectedItem(): LiveData<TrekkingSantiago> = mutableLiveData
+    fun selectedItem(trekkingSantiago: TrekkingSantiago) {
+        mutableLiveData.value = trekkingSantiago
+    }
 
     init {
         viewModelScope.launch {
             repository.getTrekkingRoutes()
-        }
-        fun selected(trekking: TrekkingSantiago){
-            selected.value = listOf(trekking)
         }
 
     }

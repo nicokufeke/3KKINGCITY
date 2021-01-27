@@ -9,6 +9,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import cl.eme.a3kkingcapital.R
 import cl.eme.a3kkingcapital.databinding.FragmentListingTrekkingsantiagoBinding
+import timber.log.Timber
 
 class TrekkingSantiagoListingFragment : Fragment() {
 
@@ -20,11 +21,22 @@ class TrekkingSantiagoListingFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        val adapter = TrekkingSantiagoAdapter()
+
         binding = FragmentListingTrekkingsantiagoBinding.inflate(layoutInflater)
         binding.rvTrekkingSantiago.layoutManager = LinearLayoutManager(context)
-        val adapter = TrekkingSantiagoAdapter()
+        binding.rvTrekkingSantiago.adapter = adapter
+
+        viewModel.selected().observe(viewLifecycleOwner, {
+            Timber.d("Lista de Datos")
+            it?.let{
+               Timber.d("Tamaño de la lista ${it.size}")
+                adapter.update(it)
+            }
+        })
         adapter.selectedItem().observe(viewLifecycleOwner,{
-            viewModel.selected()
+            viewModel.selectedItem(it)
             activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.mc, TrekkingSantiagoDetailFragment())?.addToBackStack("Detail")?.commit()
         })
 

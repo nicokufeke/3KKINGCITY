@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">3KKINGCAPITAL</string>
+    <string name="name">TextView</string>
+    <string name="location">TextView</string>
+    <string name="distance">TextView</string>
+    <string name="difficulty">TextView</string>
 </resources>
