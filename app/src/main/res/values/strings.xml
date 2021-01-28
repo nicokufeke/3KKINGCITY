@@ -4,4 +4,8 @@
     <string name="location">TextView</string>
     <string name="distance">TextView</string>
     <string name="difficulty">TextView</string>
+    <string name="cerros_de_santiago">Cerros de Santiago</string>
+    <string name="distance1">Distance</string>
+    <string name="location1">Location</string>
+    <string name="difficulty1">Difficulty</string>
 </resources>

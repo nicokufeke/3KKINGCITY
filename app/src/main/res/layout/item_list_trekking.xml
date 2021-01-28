@@ -36,6 +36,7 @@
             android:layout_marginLeft="28dp"
             android:layout_marginTop="45dp"
             android:text="TextView"
+            android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/rvimage"
