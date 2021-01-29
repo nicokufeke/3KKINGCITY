@@ -26,20 +26,21 @@ class TrekkingSantiagoDetailFragment: Fragment() {
         binding.tvDifficulty.text = it.difficulty
         binding.ivTrekkingSantiago.load(it.image)
 
+
             fun email() {
 
                 val intent = Intent(Intent.ACTION_SEND)
-                intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("consultas@trekkeasy.cl"))
+                intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("consultas@easytrek.cl"))
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Consulta por tu Trekking ${it.name} , ID : ${it.id} ")
                 intent.putExtra(
                         Intent.EXTRA_TEXT, " “Hola\n" +
                         "Vi el Trekking ${it.name} de código ${it.id} y me gustaría que me contactaran a este correo o al\n" +
-                        "siguiente número ___________")
+                        "siguiente número para conocer más detalles ___________")
                 intent.type = "message/rfc822"
                 startActivity(Intent.createChooser(intent, "Escoja el mail del cliente"))
             }
 
-            binding.floatingActionButton2.setOnClickListener { view ->
+            binding.floatingActionButton3.setOnClickListener { view ->
                 Snackbar.make(view, "Email", Snackbar.LENGTH_LONG)
                         .setAction("Action", null)
                         .show()
