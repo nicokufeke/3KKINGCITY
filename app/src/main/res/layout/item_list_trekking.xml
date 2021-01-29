@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="386dp"
         android:layout_height="115dp"
-        android:background="#0AA11E"
+        android:background="#FFFFFF"
         tools:context=".MainActivity">
 
         <ImageView
@@ -37,7 +37,7 @@
             android:layout_marginTop="45dp"
             android:text="TextView"
             android:textAllCaps="false"
-            android:textColor="#FFFFFF"
+            android:textColor="#100101"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/rvimage"
             app:layout_constraintTop_toTopOf="parent" />

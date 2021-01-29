@@ -5,7 +5,7 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0AA11E">
+    android:background="#FFFFFF">
 
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="12dp"
         android:text="Dirección"
-        android:textColor="#FFFFFF"
+        android:textColor="#090101"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivTrekkingSantiago" />
 
@@ -28,7 +28,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
         android:text="Distancia"
-        android:textColor="#FFFFFF"
+        android:textColor="#0E0C0C"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -40,7 +40,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
         android:text="Dificultad"
-        android:textColor="#FFFFFF"
+        android:textColor="#190202"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -52,7 +52,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:text="@string/difficulty"
-        android:textColor="#FFFFFF"
+        android:textColor="#0E0101"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDistance" />
 
@@ -64,7 +64,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:text="@string/distance"
-        android:textColor="#FFFFFF"
+        android:textColor="#0C0101"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
 
@@ -76,7 +76,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:text="@string/location"
-        android:textColor="#FFFFFF"
+        android:textColor="#0E0101"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivTrekkingSantiago" />
 
@@ -108,7 +108,7 @@
         android:gravity="center_horizontal"
         android:text="@string/name"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#120101"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/ivTrekkingSantiago"
         app:layout_constraintEnd_toEndOf="parent"
