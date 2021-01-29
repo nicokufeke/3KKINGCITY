@@ -5,7 +5,7 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1040E8">
+    android:background="#0AA11E">
 
 
     <TextView
@@ -89,6 +89,7 @@
         android:layout_marginEnd="178dp"
         android:layout_marginRight="178dp"
         android:clickable="true"
+        app:backgroundTint="#084E12 "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDifficulty"
